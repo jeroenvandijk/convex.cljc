@@ -9,7 +9,6 @@
            (convex.core.data AccountKey
                              Address
                              ABlob
-                             ABlobMap
                              ACell
                              AList
                              AMap
@@ -21,6 +20,7 @@
                              Blobs
                              Format
                              Hash
+                             Index                             
                              Keyword
                              Keywords
                              Lists
@@ -168,14 +168,14 @@
   "Creates a blob map from a collection of `[blob value]`."
 
 
-  (^ABlobMap []
+  (^Index []
 
    (BlobMaps/empty))
 
 
-  (^ABlobMap [kvs]
+  (^Index [kvs]
 
-   (reduce (fn [^ABlobMap bm [^ACell k ^ACell v]]
+   (reduce (fn [^Index bm [^ACell k ^ACell v]]
              (let [bm-2 (.assoc bm
                                 k
                                 v)]

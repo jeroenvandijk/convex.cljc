@@ -34,7 +34,7 @@
 
   (:import (convex.core Block
                         State)
-           (convex.core.data ABlobMap
+           (convex.core.data Index
                              AccountKey
                              AccountStatus
                              ACell
@@ -386,7 +386,7 @@
   
    A vector cell of size 2 vectors containing a logging address and a logged value."
 
-  ^ABlobMap
+  ^Index
   
   [^Context ctx]
 
