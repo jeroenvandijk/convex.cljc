@@ -34,16 +34,7 @@
    :git/url "https://github.com/protosens/monorepo.cljc"},
   world.convex/convex-core {:mvn/version "0.7.11"},
   world.convex/convex-peer {:mvn/version "0.7.11"},
-  world.convex/cvm
-  {:deps/root "module/cvm",
-   :git/sha "a35d0a80fecd085afbca1ffb82684142da8f2e77",
-   :git/url "https://github.com/convex-dev/convex.cljc"},
-  world.convex/gen
-  {:deps/root "module/gen",
-   :git/sha "a35d0a80fecd085afbca1ffb82684142da8f2e77",
-   :git/url "https://github.com/convex-dev/convex.cljc"},
-  world.convex/net
-  {:deps/root "module/net",
-   :git/sha "a35d0a80fecd085afbca1ffb82684142da8f2e77",
-   :git/url "https://github.com/convex-dev/convex.cljc"}},
+  world.convex/cvm {:local/root "../cvm",
+  world.convex/gen {:local/root "../gen",
+  world.convex/net {:local/root "../net"},
  :paths ["resource/main" "src/main/clj" "src/main/cvx"]}
