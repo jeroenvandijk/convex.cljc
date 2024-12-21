@@ -38,6 +38,7 @@
   {:author "Adam Helinski"}
 
   (:import (convex.core.data ACell
+                             Cells
                              Ref
                              Hash)
            (convex.core.store Stores)
@@ -227,7 +228,7 @@
 
   [^ACell cell]
 
-  (let [^Ref r (ACell/createPersisted (.getValue (.getRef cell)))]
+  (let [^Ref r (Cells/announce (.getValue (.getRef cell)) nil)]
     (when (.cachedHash r)
       (.getValue r))))
 
@@ -264,7 +265,7 @@
 
   [^ACell cell]
 
-  (let [^Ref r (ACell/createPersisted (.getValue (.getRef cell)))
+  (let [^Ref r (Cells/announce (.getValue (.getRef cell)) nil)
              h (.cachedHash r)]
     (when h
       (.setRootHash (.getEtch (current))
