@@ -16,7 +16,6 @@
                              AString
                              AVector
                              Blob
-                             BlobMaps
                              Blobs
                              Format
                              Hash
@@ -170,7 +169,7 @@
 
   (^Index []
 
-   (BlobMaps/empty))
+   Index/EMPTY)
 
 
   (^Index [kvs]
