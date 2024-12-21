@@ -344,7 +344,7 @@
 
   [^ACell cell]
 
-  (Hash/compute cell))
+  (Hash/get cell))
 
 
 
